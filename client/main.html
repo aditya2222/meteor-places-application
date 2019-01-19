@@ -1,0 +1,43 @@
+<head>
+  <title>google-places-prototype</title>
+</head>
+
+<body>
+	<div class="container">	
+		  <h1>Welcome to a short module which consumes the google places api to retrieve the information </h1>
+		  {{> places }}
+
+		  <ul class="collection">
+
+			  {{#each placesinfo}} 
+
+			  {{> placedetails }}
+
+			  {{/each}}
+		  </ul>
+	</div>
+</body>
+
+<template name="places">
+	<form class="add-form" action="">
+ 
+		<input type="text" name="text" placeholder="Add the name of the place">	
+	
+	</form>
+</template>
+
+
+<template name="placedetails">
+
+	<li class="collection-item">
+		NorthEast: Lat: {{lat1}} and Lng: {{lng1}}
+		SouthWest: Lat: {{lat2}} and Lng {{lng2}}
+		<br>
+		
+	Country: {{country}}
+	</li>
+
+</template>
+
+
+
